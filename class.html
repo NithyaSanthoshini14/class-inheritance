@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class remote{
+            constructor(power,batteries,volume){
+                this.power=power;
+                this.batteries=batteries;
+                this.volume=volume;
+            }
+            features(){
+                console.log(`remote have ${this.power},${this.volume} buttons it work with ${this.batteries}`)
+            }
+        }
+        let remote1=new remote("on/off","cells","high/low");
+        console.log(remote1);
+
+        class laptop{
+            constructor(brand,ram,rom){
+                this.company=brand;
+                this.ram=ram;
+                this.storage=rom;
+            }
+            details(){
+                console.log(`this brand is ${this.company} having ram of ${this.ram} having storage of ${this.storage}`)
+            }
+        }
+        let laptop1=new laptop("hp","16gb","512gb")
+        console.log(laptop1.details())
+        class vehicle{
+            constructor(car,bikes,bus,train,breaks){
+                this.car=car
+                this.bikes=bikes
+                this.bus=bus
+                this.train=train
+                this.breaks=breaks
+            }
+            types(){
+                console.log(`their are different types of transports they are ${this.car},${this.bikes},${this.bus} and ${this.train} and have a common feature ${this.breaks}`)
+            }
+        }
+        let vehicle1=new vehicle("lamborgini","GT","Garuda","krishna","breaks")
+        console.log(vehicle1.types())
+        class car extends vehicle{
+            constructor(gear,breaks,accelerator){
+                super(breaks)
+                this.gear=gear
+                this.accelerator=accelerator
+                
+            }
+            parts(){
+                console.log(`car have features like ${this.gear},${this.breaks} and ${this.accelerator}`)
+            }
+        }
+        let car1=new car("gear","breaks","accelerator")
+        console.log(car1.parts())
+
+
+    </script>
+</body>
+</html>
